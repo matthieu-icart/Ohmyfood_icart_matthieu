@@ -1,0 +1,7 @@
+/*APPARITION*/
+@for $i from 1 through 10 {
+    #case#{$i} {
+        /*Animation*/
+        animation-duration: 0.15s*$i;
+    }
+}

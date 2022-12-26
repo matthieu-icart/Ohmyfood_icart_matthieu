@@ -1,0 +1,34 @@
+.body-container {
+    /*Sizing*/
+    width: 100%;
+    height: 100%;
+    /*Position*/
+    position: absolute;
+    top: 0;
+    /*Opacity*/
+    opacity: 0;
+    /*Animation*/
+    @include loading;
+}
+
+/*LOADING*/
+@keyframes loading {
+    0% {
+        /*Opacity*/
+        opacity: 0;
+    }
+
+    99% {
+        /*Opacity*/
+        opacity: 0;
+        /*Position*/
+        z-index: -1;
+    }
+
+    100% {
+        /*Opacity*/
+        opacity: 1;
+        /*Position*/
+        z-index: 2;
+    }
+}

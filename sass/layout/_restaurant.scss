@@ -1,0 +1,65 @@
+/*RESTAURANTS*/
+.restaurants-section {
+    /*Sizing*/
+    width: 100%;
+    /*Flexbox*/
+    @include flexbox-center();
+    flex-direction: column;
+    /*Decoration*/
+    @include grey-background;
+}
+
+.restaurant {
+    /*Sizing*/
+    width: 95%;
+    /*Flexbox*/
+    @include flexbox-center();
+    flex-direction: column;
+    row-gap: 20px;
+    /*Layout*/
+    margin-bottom: 70px;
+    margin-top: 50px;
+
+    /*MediaQueries*/
+    @include desktop {
+        /*Layout*/
+        margin-top: 20px;
+        margin-bottom: 25px;
+    }
+
+    &__title {
+        /*Mixin*/
+        @include titles;
+    }
+
+    &__card {
+        /*Sizing*/
+        width: 100%;
+        /*Flexbox*/
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+
+        /*MediaQueries*/
+        @include desktop {
+            /*Grid*/
+            display: grid;
+            grid-template-rows: 1fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-gap: 20px;
+        }
+    }
+
+    &__cover {
+        /*Sizing*/
+        width: 100%;
+        height: 250px;
+        z-index: 0;
+
+        /*MediaQueries*/
+        @include desktop {
+            /*Sizing*/
+            height: 300px;
+        }
+    }
+}

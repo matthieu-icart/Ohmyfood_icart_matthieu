@@ -1,0 +1,9 @@
+/*BODY*/
+body {
+    /*Flexbox*/
+    @include flexbox-center();
+    flex-direction: column;
+    /*Font*/
+    font-family: "roboto", sans-serif;
+    font-size: 16px;
+}

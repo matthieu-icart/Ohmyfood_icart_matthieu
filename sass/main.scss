@@ -1,0 +1,29 @@
+/* GENERAL */
+@import "./utils/variables";
+@import "./utils/functions";
+@import "./utils/mixins";
+@import "./base/typography";
+/* BASE */
+@import "./base/base";
+@import "./layout/container";
+/* LOADER */
+@import "./layout/loader";
+/* BODY */
+@import "./base/body";
+/* HEADER */
+@import "./base/header";
+/* INFORMATION */
+@import "./layout/information";
+@import "./layout/button";
+/* PROCESSUS */
+@import "./layout/processus";
+@import "./layout/step";
+/* RESTAURANT */
+@import "./layout/restaurant";
+@import "./layout/card";
+/* FOOTER */
+@import "./base/footer";
+/* MENU */
+@import "./menu/menu";
+@import "./menu/lunch";
+@import "./menu/choice";

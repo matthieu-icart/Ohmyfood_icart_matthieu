@@ -1,0 +1,257 @@
+/*LOADER*/
+.loader {
+    /*Sizing*/
+    width: 100%;
+    height: 1500px;
+    /*Flexbox*/
+    @include flexbox-center();
+    /*Animation*/
+    @include loader;
+
+    &__table {
+        /*Sizing*/
+        width: 190px;
+        height: 150px;
+        /*Flexbox*/
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        /*Position*/
+        position: relative;
+        bottom: 400px;
+        /*Decoration*/
+        @include border-radius-50;
+        /*Animation*/
+        animation: table-animation 1.5s forwards;
+        animation-delay: 1.5s;
+    }
+
+    &__fork {
+        /*Sizing*/
+        width: 30px;
+        height: 120px;
+        /*Flexbox*/
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /*Animation*/
+        animation: fork 1.5s;
+
+        &__top {
+            /*Sizing*/
+            width: 50%;
+            height: 27%;
+            /*Flexbox*/
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        &__teeth {
+            /*Sizing*/
+            width: 15%;
+            height: 100%;
+            /*Decoration*/
+            @include dark-background;
+            border-radius: 50px 50px 0px 0px;
+        }
+
+        &__mid {
+            /*Sizing*/
+            width: 50%;
+            height: 3%;
+            /*Decoration*/
+            @include dark-background;
+        }
+
+        &__bottom {
+            /*Sizing*/
+            width: 30%;
+            height: 70%;
+            /*Decoration*/
+            @include dark-background;
+            border-radius: 0px 0px 30px 30px;
+        }
+    }
+
+    &__plate {
+        /*Sizing*/
+        width: 130px;
+        height: 130px;
+        /*Flexbox*/
+        @include flexbox-center();
+        /*Decoration*/
+        border: 1.5px solid gray;
+        border-radius: 50%;
+        /*Animation*/
+        animation: plate 2s;
+
+        &__inside {
+            /*Sizing*/
+            width: 100px;
+            height: 100px;
+            /*Flexbox*/
+            @include flexbox-center();
+            /*Decoration*/
+            @include grey-background;
+            border: 0.5px solid grey;
+            @include border-radius-50;
+        }
+
+        &__logo {
+            /*Font*/
+            @include shrikhand;
+            font-size: 15px;
+        }
+    }
+
+    &__knife {
+        /*Sizing*/
+        width: 30px;
+        height: 120px;
+        /*Flexbox*/
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /*Animation*/
+        animation: knife 2s;
+
+        &__top {
+            /*Sizing*/
+            width: 30%;
+            height: 55%;
+            /*Flexbox*/
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            /*Decoration*/
+            @include dark-background;
+            border-radius: 70px 10px 0px 0px;
+        }
+
+        &__bottom {
+            /*Sizing*/
+            width: 30%;
+            height: 45%;
+            /*Decoration*/
+            background-color: black;
+            border-radius: 0px 0px 30px 30px;
+        }
+    }
+}
+
+/*LOADER*/
+@keyframes loader {
+    0% {
+        /*Opacity*/
+        opacity: 1;
+        height: 1500px;
+    }
+
+    90% {
+        /*Opacity*/
+        opacity: 1;
+        height: 1500px;
+    }
+
+    99% {
+        /*Opacity*/
+        opacity: 0.1;
+        /*Position*/
+        z-index: 1;
+        height: 1500px;
+    }
+
+    100% {
+        /*Opacity*/
+        opacity: 0;
+        /*Position*/
+        z-index: -999;
+        height: 500px;
+    }
+}
+
+/*TABLE*/
+@keyframes table-animation {
+    from {
+        /*Animation*/
+        transform: scale(1);
+        /*Opacity*/
+        opacity: 1;
+    }
+
+    50% {
+        /*Animation*/
+        transform: scale(2);
+        /*Opacity*/
+        opacity: 1;
+    }
+
+    99% {
+        /*Animation*/
+        transform: scale(0.1);
+        /*Opacity*/
+        opacity: 0.1;
+        /*Position*/
+        z-index: 999;
+    }
+
+    to {
+        /*Animation*/
+        transform: scale(1);
+        /*Opacity*/
+        opacity: 0;
+        /*Position*/
+        z-index: -1;
+    }
+}
+
+@keyframes fork {
+    from {
+        /*Animation*/
+        transform: translateX(-200px);
+        /*Opacity*/
+        opacity: 0;
+    }
+
+    to {
+        /*Animation*/
+        transform: translateX(0);
+        /*Opacity*/
+        opacity: 1;
+    }
+}
+
+@keyframes plate {
+    0% {
+        /*Animation*/
+        transform: scale(2.5) rotate(0deg);
+    }
+
+    80% {
+        /*Animation*/
+        transform: scale(1) rotate(360deg);
+    }
+
+    100% {
+        /*Animation*/
+        transform: scale(1);
+    }
+}
+
+@keyframes knife {
+    from {
+        /*Animation*/
+        transform: translateX(200px);
+        /*Opacity*/
+        opacity: 0;
+    }
+
+    to {
+        /*Animation*/
+        transform: translateX(0);
+        /*Opacity*/
+        opacity: 1;
+    }
+}

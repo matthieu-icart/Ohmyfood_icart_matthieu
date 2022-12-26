@@ -1,0 +1,40 @@
+/*BUTTON*/
+.button {
+    /*Sizing*/
+    width: 60%;
+    box-sizing: border-box;
+    /*Font*/
+    @include white-text;
+    white-space: nowrap;
+    text-align: center;
+    /*Layout*/
+    margin-top: 30px;
+    margin-bottom: 55px;
+    padding: 15px 20px;
+    /*Decoration*/
+    @include linear-gradient;
+    @include box-shadow;
+    border: none;
+    @include border-radius-50;
+
+    /*MediaQueries*/
+    @include desktop {
+        /*Sizing*/
+        width: 30%;
+        /*Layout*/
+        margin-top: 10px;
+        margin-bottom: 25px;
+    }
+
+    &-menu {
+        /*Layout*/
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    &:hover {
+        /*Decoration*/
+        @include linear-gradient-light;
+        @include box-shadow-hover;
+    }
+}

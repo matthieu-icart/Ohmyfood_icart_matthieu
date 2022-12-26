@@ -1,0 +1,135 @@
+.choice {
+    /*Sizing*/
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    /*Flexbox*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    /*Position*/
+    position: relative;
+    /*Decoration*/
+    @include grey-background;
+    @include box-shadow;
+    border: none;
+    @include border-radius-20;
+    /*Layout*/
+    padding: 12px 10px;
+    /*Animation*/
+    @include choice-apparition;
+
+    &__description {
+        /*Font*/
+        text-align: start;
+        overflow: hidden;
+
+        &__title {
+            /*Font*/
+            @include roboto-bold;
+            font-size: 18px;
+        }
+
+        &__subtitle {
+            /*Font*/
+            @include grey-text;
+        }
+
+        &__price {
+            /*Font*/
+            @include roboto-bold;
+            /*Transition*/
+            @include simple-transition;
+            /*Layout*/
+            margin-right: 10px;
+        }
+    }
+
+    &__onclick {
+        /*Sizing*/
+        height: 100%;
+        /*Flexbox*/
+        @include flexbox-center();
+        /*Position*/
+        position: absolute;
+        right: -100px;
+        top: 0px;
+        /*Layout*/
+        padding: 0px 20px;
+        /*Decoration*/
+        @include white-text;
+        background-color: $tertiary-color;
+        /*Transition*/
+        @include simple-transition;
+
+        &__icon {
+            /*Font*/
+            font-size: 20px;
+            /*Animation*/
+            transform: rotate(-180deg);
+            /*Transition*/
+            @include simple-transition;
+        }
+    }
+
+    &:hover {
+        /*Decoration*/
+        @include light-background;
+        @include box-shadow-hover;
+        /*Transition*/
+        @include simple-transition;
+    }
+
+    &:hover .choice__onclick {
+        /*Animation*/
+        @include slide-bar;
+        /*Transition*/
+        @include simple-transition;
+    }
+
+    &:hover .choice__onclick__icon {
+        /*Animation*/
+        transform: rotate(360deg);
+        @include simple-transition;
+    }
+
+    &:hover .choice__description__price {
+        /*Layout*/
+        margin-right: 70px;
+        /*Transition*/
+        @include simple-transition;
+    }
+}
+
+/*GREENBAR*/
+.greenbar {
+    /*Sizing*/
+    width: 50px;
+    /*Decoration*/
+    border-bottom: 3px solid $tertiary-color;
+    /*Layout*/
+    margin-top: 5px;
+}
+
+/*CHOICE APPARITION*/
+@keyframes choice-apparition {
+    0% {
+        /*Animation*/
+        transform: translate(0px, 150px);
+        /*Opacity*/
+        opacity: 0;
+    }
+
+    30% {
+        /*Opacity*/
+        opacity: 0;
+    }
+
+    100% {
+        /*Animation*/
+        transform: translate(0px, 0px);
+        /*Opacity*/
+        opacity: 1;
+    }
+}

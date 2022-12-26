@@ -1,0 +1,32 @@
+.lunch {
+    /*Sizing*/
+    width: 100%;
+    /*Flexbox*/
+    display: flex;
+    flex-direction: column;
+
+    /*MediaQueries*/
+    @include desktop {
+        /*Flexbox*/
+        width: 30%;
+    }
+
+    &__title {
+        /*Font*/
+        text-transform: uppercase;
+        font-weight: 100;
+        @include grey-text;
+        /*Layout*/
+        margin-bottom: 15px;
+        margin-top: 40px;
+    }
+
+    &__choices {
+        /*Sizing*/
+        width: 100%;
+        /*Flexbox*/
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+}

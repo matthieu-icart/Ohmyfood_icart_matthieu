@@ -1,0 +1,102 @@
+/*MENU*/
+.menu-section {
+    /*Sizing*/
+    width: 100%;
+    /*Flexbox*/
+    @include flexbox-center();
+    flex-direction: column;
+    z-index: 2;
+    /*Decoration*/
+    @include grey-background;
+    border-radius: 50px 50px 0px 0px;
+    /*Layout*/
+    margin-top: -50px;
+
+    /*MediaQueries*/
+    @include desktop {
+        /*Sizing*/
+        width: 80%;
+        /*Layout*/
+        margin-bottom: 50px;
+        margin-top: -100px;
+        /*Decoration*/
+        @include border-radius-50;
+    }
+}
+
+.menu {
+    /*Sizing*/
+    width: 90%;
+    /*Flexbox*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*Layout*/
+    margin-top: 40px;
+
+    &__title {
+        /*Sizing*/
+        width: 100%;
+        /*Flexbox*/
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        /*Font*/
+        @include shrikhand;
+
+        &__icon {
+            /*Font*/
+            font-size: 25px;
+            font-weight: 100;
+            /*Layout*/
+            margin-right: 50px;
+            margin-left: 20px;
+            margin-bottom: 20px;
+
+            &-empty {
+                /*Position*/
+                position: absolute;
+            }
+
+            &-full {
+                /*Position*/
+                position: absolute;
+                /*Decoration*/
+                @include heart-color;
+                /*Transition*/
+                opacity: 0;
+            }
+
+            &:hover .menu__title__icon-full {
+                /*Transition*/
+                opacity: 1;
+                @include simple-transition;
+            }
+        }
+    }
+
+    &__page {
+        /*Sizing*/
+        width: 100%;
+        /*Flexbox*/
+        @include flexbox-center();
+        flex-direction: column;
+
+        /*MediaQueries*/
+        @include desktop {
+            /*Flexbox*/
+            flex-direction: row;
+            align-items: flex-start;
+            column-gap: 50px;
+        }
+    }
+
+    &-desktop {
+        /*Sizing*/
+        width: 100%;
+        /*Flexbox*/
+        @include flexbox-center;
+        flex-direction: column;
+    }
+}

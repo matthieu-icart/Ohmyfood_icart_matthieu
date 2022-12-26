@@ -1,0 +1,56 @@
+/*FONTS*/
+@font-face {
+    font-family: "roboto";
+    src: url("../font-family/roboto/Roboto-Regular.ttf");
+}
+
+@font-face {
+    font-family: "roboto-bold";
+    src: url("../font-family/roboto/Roboto-Bold.ttf");
+}
+
+@font-face {
+    font-family: "shrikhand";
+    src: url("../font-family/shrikhand/Shrikhand-Regular.ttf");
+}
+
+/*RESET*/
+h1 {
+    /*Font*/
+    font-weight: unset;
+    font-size: 30px;
+}
+
+h2,
+h3,
+h4,
+p {
+    /*Layout*/
+    margin: unset;
+}
+
+ul {
+    /*Layout*/
+    padding: unset;
+    /*Decoration*/
+    list-style: none;
+}
+
+a {
+    /*Decoration*/
+    text-decoration: none;
+    color: inherit;
+}
+
+.ellipsis {
+    /*Sizing*/
+    width: 100%;
+    /*Display*/
+    display: inline-block;
+    /*Font*/
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /*Layout*/
+    margin-right: 1px;
+}

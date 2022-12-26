@@ -1,0 +1,74 @@
+/*FOOTER*/
+.footer {
+    /*Sizing*/
+    width: 100%;
+    /*Flexbox*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*Decoration*/
+    background-color: $footer-background;
+    @include white-text;
+    /*Layout*/
+    padding: 20px 0px;
+
+    /*MediaQueries*/
+    @include desktop {
+        /*Flexbox*/
+        flex-direction: row;
+    }
+
+    &__title {
+        /*Sizing*/
+        width: 90%;
+        /*Font*/
+        @include shrikhand;
+
+        /*MediaQueries*/
+        @include desktop {
+            /*Layout*/
+            margin-left: 20px;
+            /*Font*/
+            font-size: 50px;
+        }
+    }
+
+    &__menu {
+        /*Sizing*/
+        width: 90%;
+
+        /*MediaQueries*/
+        @include desktop {
+            /*Sizing*/
+            width: 80%;
+            /*Flexbox*/
+            @include flexbox-center;
+        }
+    }
+
+    &__menu__element {
+        /*Flexbox*/
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        column-gap: 10px;
+        /*Layout*/
+        margin-bottom: 10px;
+    }
+
+    &-desktop {
+
+        /*MediaQueries*/
+        @include desktop {
+            /*Flexbox*/
+            display: flex;
+            flex-direction: row;
+            column-gap: 20px;
+            /*Font*/
+            font-size: 25px;
+            /*Layout*/
+            margin-right: 20px;
+        }
+    }
+}

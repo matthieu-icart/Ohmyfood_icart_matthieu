@@ -1,0 +1,55 @@
+/*PROCESSUS*/
+.processus-section {
+    /*Sizing*/
+    width: 100%;
+    /*Flexbox*/
+    @include flexbox-center();
+    flex-direction: column;
+    /*Decoration*/
+    @include light-background;
+    /*Layout*/
+    margin-top: 50px;
+    margin-bottom: 70px;
+
+    /*MediaQueries*/
+    @include desktop {
+        /*Layout*/
+        margin-top: 20px;
+        margin-bottom: 25px;
+    }
+}
+
+.processus {
+    /*Sizing*/
+    width: 95%;
+    /*Flexbox*/
+    @include flexbox-center();
+    flex-direction: column;
+    row-gap: 30px;
+
+    /*MediaQueries*/
+    @include desktop {
+        /*Flexbox*/
+        row-gap: 10px;
+    }
+
+    &__title {
+        /*Mixin*/
+        @include titles;
+    }
+
+    &-desktop {
+        /*Sizing*/
+        width: 100%;
+        /*Flexbox*/
+        @include flexbox-center;
+        flex-direction: column;
+        row-gap: 20px;
+
+        /*MediaQueries*/
+        @include desktop {
+            /*Layout*/
+            flex-direction: row;
+        }
+    }
+}

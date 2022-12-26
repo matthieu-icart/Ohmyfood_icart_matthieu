@@ -1,0 +1,157 @@
+/*RESPONSIVE*/
+$breakpoints: (
+    desktop: 1000px
+);
+
+@mixin desktop {
+    @media screen and (min-width: map-get($breakpoints, desktop)) {
+        @content;
+    }
+}
+
+/*FLEXBOX*/
+@mixin flexbox-center {
+    /*Flexbox*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*BACKGROUND*/
+@mixin light-background {
+    /*Decoration*/
+    background-color: $light-background;
+}
+
+@mixin grey-background {
+    /*Decoration*/
+    background-color: $grey-background;
+}
+
+@mixin dark-background {
+    /*Decoration*/
+    background-color: $dark-background;
+}
+
+@mixin hover-background {
+    /*Decoration*/
+    background-color: $hover-color;
+}
+
+@mixin linear-gradient {
+    /*Decoration*/
+    background: linear-gradient(180deg, $secondary-color 0%, $primary-color 100%);
+}
+
+@mixin linear-gradient-light {
+    /*Decoration*/
+    background: linear-gradient(180deg, $secondary-color-light 0%, $primary-color-light 100%);
+}
+
+/*DECORATION*/
+@mixin heart-color {
+    /*Decoration*/
+    color: $primary-color;
+}
+
+@mixin border-radius-50 {
+    /*Decoration*/
+    border-radius: 50px;
+}
+
+@mixin border-radius-20 {
+    /*Decoration*/
+    border-radius: 20px;
+}
+
+@mixin box-shadow {
+    /*Decoration*/
+    box-shadow: 5px 5px 10px $box-shadow;
+}
+
+@mixin box-shadow-hover {
+    /*Decoration*/
+    box-shadow: 15px 15px 25px $dark-box-shadow;
+}
+
+@mixin white-text {
+    /*Font*/
+    color: white;
+}
+
+@mixin grey-text {
+    /*Decoration*/
+    color: $text-color;
+}
+
+/*POLICE*/
+@mixin shrikhand {
+    /*Font*/
+    font-family: "shrikhand";
+}
+
+@mixin roboto-bold {
+    /*Font*/
+    font-family: "roboto-bold";
+}
+
+/*ANIMATION*/
+@mixin simple-transition {
+    /*Transition*/
+    transition: all 0.5s;
+}
+
+@mixin loading {
+    /*Animation*/
+    animation: loading 2.7s linear forwards;
+    z-index: -1;
+}
+
+@mixin loader {
+    /*Animation*/
+    animation: loader 2.7s linear forwards;
+}
+
+@mixin heart {
+    /*Transition*/
+    @include simple-transition();
+    /*Opacity*/
+    opacity: 1;
+}
+
+@mixin choice-apparition {
+    /*Animation*/
+    animation: choice-apparition 1.5s ease-in-out;
+    transform-origin: 50% bottom;
+}
+
+@mixin slide-bar {
+    /*Animation*/
+    transform: translateX(-100px);
+    transform-origin: right;
+}
+
+@mixin logo-rotation {
+    /*Animation*/
+    transform: rotate3d(1, 0, 0, 360deg);
+    /*Transition*/
+    transition: all 1s;
+}
+
+/*TITLE*/
+@mixin titles {
+    /*FLexbox*/
+    align-self: flex-start;
+    /*Font*/
+    @include roboto-bold;
+    /*Layout*/
+    margin-left: 10px;
+
+    /*MediaQueries*/
+    @include desktop {
+        /*Flexbox*/
+        align-self: center;
+        /*Layout*/
+        margin-left: unset;
+    }
+}
