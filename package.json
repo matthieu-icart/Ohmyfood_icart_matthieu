@@ -1,0 +1,19 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "Projet 3 / Dynamiser une page web avec des animations CSS",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matthieu-icart/Ohmyfood.git"
+  },
+  "author": "Icart Matthieu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matthieu-icart/Ohmyfood/issues"
+  },
+  "homepage": "https://github.com/matthieu-icart/Ohmyfood#readme"
+}
